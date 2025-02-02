@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'student_record_system.settings')
+
+setting_module = "student_record_system.deployment" if "RENDER_EXTERNAL_HOSTNAME" in os.environ else "student_record_system.settings"
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', setting_module)
 
 application = get_wsgi_application()
