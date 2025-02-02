@@ -57,7 +57,8 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"  
+    # "http://localhost:3000" 
+    "https://delightful-water-064611403.4.azurestaticapps.net" 
     
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
